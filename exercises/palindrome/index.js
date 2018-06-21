@@ -20,7 +20,6 @@ function palindrome(str) {
     // }
 
     //solution three
-    strArr = str.split('');
 
   
     return str.split('').every((char, i) => {

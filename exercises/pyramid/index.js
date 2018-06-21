@@ -14,6 +14,30 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+    // solution 1
+    // let totalHash = '#';
+    // let addHash = '##';
+    //
+    // for(let i=0; i<n; i++) {
+    //     console.log(' '.repeat(n - i - 1) + totalHash + ' '.repeat(n - i - 1));
+    //     totalHash += addHash;
+    // }
+
+    // solution 2
+    for(let row = 0; row < n; row++) {
+        let level = '';
+        let midpoint = n - 1;
+
+        for(let column = 0; column < n*2 -1 ; column++) {
+            if (column >= midpoint-row && column <= midpoint+row) {
+                level += '#';
+            } else {
+                level += ' ';
+            }
+        }
+        console.log(level);
+    }
+}
 
 module.exports = pyramid;
